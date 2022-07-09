@@ -1,0 +1,31 @@
+{
+  "name": "apielasticnode",
+  "version": "1.0.0",
+  "description": "aplicação de conexao elastcsearch com node js",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "pull-elastic": "docker pull elasticsearch:8.3.2",
+    "docker-image": "docker images",
+    "elastic": "docker run --restart=always -d --name elastic -p 9200:9200 -e 'http.host=0.0.0.0' -e 'transport.host=127.0.0.1' elasticsearch:8.3.2",
+    "docker-ps": "docker ps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jusansilva/apiElasticNode.git"
+  },
+  "author": "Jusan Magno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jusansilva/apiElasticNode/issues"
+  },
+  "homepage": "https://github.com/jusansilva/apiElasticNode#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.2.1",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "elasticsearch": "^16.7.3",
+    "express": "^4.18.1"
+  }
+}
